@@ -9,7 +9,6 @@
         <File name="base" src="html/css/base.css" />
         <File name="common" src="html/css/common.css" />
         <File name="style" src="html/css/style.css" />
-        <File name="P_par" src="html/images/P_par.png" />
         <File name="aiko" src="html/images/aiko.png" />
         <File name="bg" src="html/images/bg.jpg" />
         <File name="bg_title" src="html/images/bg_title.png" />
@@ -31,13 +30,14 @@
         <File name="core" src="html/js/core.js" />
         <File name="janken" src="html/js/janken.js" />
         <File name="jquery-1.8.3.min" src="html/js/jquery-1.8.3.min.js" />
-        <File name="" src="html/images/.DS_Store" />
         <File name="gameclear" src="html/images/gameclear.jpg" />
+        <File name="gameover" src="html/images/gameover.png" />
+        <File name="gameclear" src="html/images/gameclear.png" />
+        <File name="P_par" src="html/images/P_par.png" />
     </Resources>
     <Topics />
     <IgnoredPaths>
-        <Path src=".metadata" />
+        <Path src="html/images/.DS_Store" />
         <Path src="html/.DS_Store" />
-        <Path src=".DS_Store" />
     </IgnoredPaths>
 </Package>

@@ -83,7 +83,7 @@ div.selectIcon p {
 .btnStop {
 	position:absolute;
 	right:0px;
-	z-index:100;
+	z-index:1000;
 }
 
 /***********************************
@@ -192,7 +192,7 @@ div.selectIcon p.choki {
 	//background-position:-483px -179px;
 }
 div.selectIcon p.par { 
-	background:url(../images/p_par.png) no-repeat;
+	background:url(../images/p_par.png?hoge=001) no-repeat;
 	background-size:contain;
 	//background-position:-489px -388px;
 }
@@ -265,7 +265,9 @@ div.gameOverContainer {
 	position:absolute;
 	top:0;
 	left:0;
-	width:360px;
+	//width:360px;
+	width:100%;
+	height:100%;
 }
 
 

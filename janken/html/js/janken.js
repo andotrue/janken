@@ -525,7 +525,7 @@ jankengame.global.addPackage("view.janken");
 						$("div.clearContainer").css("display", "block");
 						//scope.finalButtonContainerVisible(true);
 						
-						scope.indicator.hideStopBtn();
+						//scope.indicator.hideStopBtn();//____☓ボタンを隠さない
 					} else {
 						//次の対戦へ
 						scope.startJanken(scope.currentBattleIndex);
