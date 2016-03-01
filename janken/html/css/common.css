@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+
+/**************************************************************************
+ 基本タグ
+**************************************************************************/
+
+body {
+	margin:0;
+	padding:0;
+	color: #000;
+	background: #fff;
+	font-family: ArialMT, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", メイリオ, sans-serif;
+	font-size: 12px;
+	line-height: 1.5;
+	-webkit-text-size-adjust: none;
+}
+
+html,body {
+	height:100%;
+}
+
+body,h1,h2,h3,h4,h5,h6,div,p,ul,li,table,tr,td,article,section {
+	margin:0;
+	padding:0;
+}
+
+
+
+/**************************************************************************
+ ボタンクラス 必ず<p class=""><a></a></p>の構造とする
+**************************************************************************/
+.btnStop a {
+	background:url(../images/exit.png) no-repeat;
+	background-size:50px 50px;
+	display:block;
+	text-indent:-9999px;
+}
+
+.btnStop a {
+	width:80px;
+	height:80px;
+}
+
+p.textGameClear,
+p.textGameOver,
+	text-align:left;
+}
+
+div.cautionContainer {
+	display:none;
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background:rgba(0,0,0,0.80);
+	z-index:99999;
+}
+
+div.cautionContainer p {
+	vertical-align:middle;
+	color:#fff;
+	font-size:1.5em;
+	text-align:center;
+	padding-top:150px;
+}
+
+
+
+/***********************************
+ テキストコンテナ
+***********************************/
+div.textContainer {
+	//position:absolute;
+	width:100%;
+	text-align:center;
+	z-index:380;
+	top:0;
+	left:0;
+	padding-top:100px;
+}
+
+div.textContainer p {
+	text-align:left;
+	text-indent:-9999px;
+	margin:auto;
+}
+
+p.textGameOver {
+	background:url(../images/zannen.png) no-repeat;
+	width:326px;
+	height:64px;
+	position:relative;
+	margin:auto;
+	top: -65px;
+	left: 165px;
+	z-index: 9999;
+}
+
+p.textGameClear {
+	background:url(../images/yarareta.png) no-repeat;
+	width:334px;
+	height:80px;
+	position:relative;
+	margin:auto;
+	top: -65px;
+	z-index: 9999;
+}
+
+p.iconGameOver_Janken {
+	background:url(../images/gameover.jpg) no-repeat;
+	background-size:contain;
+	width:570px;
+	height:360px;
+	position: relative;
+	top: -295px;
+	left: 50px;
+	margin:auto auto auto auto;
+}
+
+p.iconClearChara_Janken {
+	background:url(../images/gameclear.jpg) no-repeat;
+	background-size:contain;
+	width:570px;
+	height:360px;
+	position:relative;
+	top: -295px;
+	left: 0px;
+	margin:auto auto auto auto;
+}
+
+div.gameOverContainer div.centerContainer {
+	top:190px;
+}
+
+div.bgGameOver {
+	background:rgba(237,225,241,0.5);
+	width:200%;
+	height:200%;
+	display:none;
+	position:absolute;
+	left:0;
+	top:0;
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.34, minimum-scale=1.34, maximum-scale=1.34, user-scalable=no">
+
+<title>じゃんけん</title>
+
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/janken.js"></script>
+
+</head>
+
+
+<body>
+<div class="loadingContainer">
+	<p>ローディング</p>
+</div>
+<div class="rootContainer">
+	<div class="bgContainer">
+		<div class="bgMain"></div>
+		<div class="commonBgContainer">
+			<div class="bgColor"></div>
+		</div>
+	
+		<!-- タイトル画面 -->
+		<div class="titleContainer">
+			<h1>じゃんけん</h1>
+		</div>
+	</div>
+	
+	<div class="resizeContainer">
+		<!-- タイトル画面 -->
+		<div class="titleContainer">
+			<p class="btnStart"><a href="javascript:void(0)">ゲームスタート</a></p>
+		</div>
+
+		<!-- ゲーム画面 -->
+		<div class="gameContainer">
+			<p class="btnStop"><a href="javascript:void(0)">やめる</a></p>
+			
+			<!-- じゃんけん前の演出テキスト -->
+			<div class="textContainer">
+				<p class="textJan">じゃん</p>
+				<p class="textKen">けん</p>
+				<p class="textPon">ぽんっ!</p>
+				<p class="textWin">勝ち!</p>
+				<p class="textLose">負け…</p>
+				<p class="textAiko">あいこで…</p>
+			</div>
+			
+			<!-- 選んだときのじゃんけんパネル -->
+			<div class="selectIconContainer">
+				<div class="selectIcon"><p class="goo"></p></div>
+			</div>
+			
+			<!-- じゃんけんUI -->
+			<div class="jankenContainer">
+				<p class="iconJanken iconGoo"><span></span><a href="javascript:void(0)">グー</a></p>
+				<p class="iconJanken iconChoki"><span></span><a href="javascript:void(0)">チョキ</a></p>
+				<p class="iconJanken iconPar"><span></span><a href="javascript:void(0)">パー</a></p>
+			</div>
+			
+			<!-- 勝ち -->
+			<div class="clearContainer">
+				<!-- 文字画像 -->
+				<p class="textGameClear"></p>
+				<!-- 画像 -->
+				<p class="iconClearChara_Janken"></p>
+			</div>
+			<!-- 負け -->
+			<div class="gameOverContainer">
+				<!-- 負け（オーバーレイアー） -->
+				<div class="bgGameOver"></div>
+				<!-- 文字画像 -->
+				<p class="textGameOver"></p>
+				<!-- 画像 -->
+				<p class="iconGameOver_Janken"></p>
+			</div>
+			
+		</div>
+	</div>
+
+</div>
+
+<div class="cautionContainer">
+	<p>当コンテンツは端末を縦向きにしてお楽しみください。</p>
+</div>
+
+</body>
+
+
+</html>

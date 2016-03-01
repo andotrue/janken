@@ -1,0 +1,286 @@
+@charset "utf-8";
+
+/* じゃんけんゲーム */
+
+
+/**************************************************************************
+ 背景
+**************************************************************************/
+
+body {
+	background:url(../images/bg.jpg) no-repeat center top;
+	background-size:360px 567px;
+}
+
+/**************************************************************************
+ タイトル画面
+**************************************************************************/
+
+div.resizeContainer div.titleContainer {
+}
+
+h1 {
+	background:url(../images/bg_title.png) no-repeat center top;
+	background-size:370px 431px;
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	text-indent:-9999px;
+}
+
+p.btnStart a {
+	background:url(../images/parts_title.png) no-repeat;
+	background-size:337px 170px;
+	display:block;
+	text-indent:-9999px;
+}
+
+p.btnStart {
+	text-align:center;
+}
+
+p.btnStart a {
+	text-align:left;
+	margin:auto;
+}
+
+p.btnStart a {
+	width:328px; 
+	height:170px;
+	//background-position:-4px -108px;
+	position: relative;
+    top: 240px;
+}
+
+
+
+/**************************************************************************
+ ゲーム画面
+**************************************************************************/
+
+div.gameContainer {
+	display:none;
+}
+
+div.resizeContainer div.gameContainer {
+	margin:auto;
+	position:relative;
+}
+
+div.textContainer p,
+p.iconJanken a,
+p.iconJanken span,
+div.selectIcon p {
+	//background:url(../images/parts_game.png) no-repeat;
+	//background-size:909px 656px;
+	//display:block;
+}
+
+/***********************************
+ ヘッダ部分
+***********************************/
+.btnStop {
+	position:absolute;
+	right:0px;
+	z-index:100;
+}
+
+/***********************************
+ テキストコンテナ
+***********************************/
+div.textContainer {
+	//position:absolute;
+	width:100%;
+	text-align:center;
+	z-index:80;
+	padding-top:100px;
+}
+
+div.textContainer p {
+	text-align:left;
+	text-indent:-9999px;
+	margin:auto;
+}
+
+div.textContainer p.textJan {
+	background:url(../images/jan.png) no-repeat;
+	width:200px;
+	height:70px;
+	position: relative;
+	left: -90px;
+    top: -70px;
+}
+div.textContainer p.textKen {
+	background:url(../images/ken.png) no-repeat;
+	width:200px;
+	height:70px;
+	position: relative;
+	left: 100px;
+    top: -144px;
+}
+
+div.textContainer p.textPon {
+	background:url(../images/p_goo.png) no-repeat;
+	width:286px;
+	height:83px;
+	background-position:-2px -427px;
+	position: relative;
+	top: -70px;
+}
+
+div.textContainer p.textWin {
+	width:208px;
+	height:74px;
+	background-position:-261px -64px;
+	position: relative;
+	top: -53px;
+}
+
+div.textContainer p.textLose {
+	width:252px;
+	height:92px;
+	background-position:-225px -309px;
+	position: relative;
+	top: -70px;
+}
+
+div.textContainer p.textAiko {
+	background:url(../images/aiko.png) no-repeat;
+	//background-size:contain;
+	width:350px;
+	height:80px;
+	//background-position:-7px -532px;
+	position: relative;
+	top: -100px;
+}
+
+
+/***********************************
+ じゃんけんパネル
+***********************************/
+div.selectIconContainer {
+	padding-top:168px;
+}
+
+div.selectIcon {
+	position:relative;
+	top: -175px;
+	left: -55px;
+	width:270px;
+	height:273px;
+	margin:auto;
+	background-position:-640px -2px;
+}
+
+div.selectIcon p {
+	position:absolute;
+	left:61px;
+	top:-127px;
+	width:250px;
+	height:250px;
+}
+
+div.selectIcon p.goo { 
+	background:url(../images/p_goo.png) no-repeat;
+	background-size:contain;
+	//background-position:-477px 17px; 
+}
+div.selectIcon p.choki {
+	background:url(../images/p_choki.png) no-repeat;
+	background-size:contain;
+	//background-position:-483px -179px;
+}
+div.selectIcon p.par { 
+	background:url(../images/p_par.png) no-repeat;
+	background-size:contain;
+	//background-position:-489px -388px;
+}
+
+
+/***********************************
+ じゃんけんアイコン
+***********************************/
+div.jankenContainer {
+	position:absolute;
+	left:160px;
+	top:430px;
+	width:338px;
+	height:108px;
+}
+
+p.iconJanken,
+p.iconJanken a,
+p.iconJanken span {
+	width:108px;
+	height:114px;
+	text-align:left;
+	text-indent:-9999px;
+}
+
+p.iconJanken {
+	position:absolute;
+	top:0;
+}
+
+p.iconJanken span {
+	opacity:0.3;
+}
+
+p.iconJanken a {
+	display:none;
+	position:relative;
+}
+
+p.iconGoo { left:-85px; }
+p.iconChoki { left:115px; }
+p.iconPar { left:310px; }
+
+p.iconGoo a,
+p.iconGoo span {
+	background:url(../images/goo.png) no-repeat;
+	background-size:contain;
+	//background-position:-2px -76px;
+}
+
+p.iconChoki a,
+p.iconChoki span {
+	background:url(../images/choki.png) no-repeat;
+	background-size:contain;
+	//background-position:-115px -74px;
+}
+
+p.iconPar a,
+p.iconPar span {
+	background:url(../images/par.png) no-repeat;
+	background-size:contain;
+	//background-position:-297px -413px;
+}
+
+
+/***********************************
+ ゲームオーバー
+***********************************/
+div.gameOverContainer {
+	position:absolute;
+	top:0;
+	left:0;
+	width:360px;
+}
+
+
+div.resizeContainer div.gameOverContainer {
+	padding-top:253px;s
+}
+
+/***********************************
+ ゲームクリア
+***********************************/
+div.clearContainer {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:998;
+	width:100%;
+	padding-top:229px;
+}

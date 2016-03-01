@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/**************************************************************************
+ 基本タグ
+**************************************************************************/
+
+body {
+	overflow:hidden;
+}
+
+
+/**************************************************************************
+ 共通クラス
+**************************************************************************/
+
+.rootContainer {
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+ 
+.resizeContainer {
+	width:100%;
+	position:relative;
+	text-align:center;
+	transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	-webkit-transform-origin:0 0;
+}
+
+.bgContainer {
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0; 
+}
+
+.bgContainer div {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+}
+
+.bgColor {
+	background:#A87E00;
+}
+
+.commonBgContainer {
+	display:none;
+}
+
+div.gameClearContainer,
+div.gameOverContainer {
+	display:none;
+}
+
+/**************************************************************************
+ ローディング
+**************************************************************************/
+div.loadingContainer {
+	position:fixed;
+	z-index:99999;
+	width:100%;
+	height:100%;
+	background:#fff;
+}
+
+div.loadingContainer p {
+	background:url(../images/loading.png) no-repeat center center;
+	background-size:149px 30px;
+	width:100%;
+	height:100%;
+	text-indent:-9999px;
+}
+
+/***********************************
+ エラーパネル
+***********************************/
+
+div.loginErrorContainer {
+	padding:20px;
+}
+
+div.loginErrorContainer p {
+	margin-bottom:10px;
+}
+
