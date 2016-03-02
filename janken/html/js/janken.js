@@ -269,6 +269,7 @@ jankengame.global.addPackage("view.janken");
 	 * result : 0:あいこ、1:勝ち、2:負け
 	 ******************************************************************/ 
 	this.TextEffect.prototype.showJudge = function(result, cb_func) {
+		
 		var scope = this;
 		this.textJan.visible(false);
 		this.textKen.visible(false);
@@ -280,6 +281,23 @@ jankengame.global.addPackage("view.janken");
 		textPon.visible(true);
 		textPon.scale = 2;
 		textPon.update();
+		
+		//var before_aiko_flg = 0;
+		console.log("result:" + result);
+		/*
+		if(isset( before_aiko_flg )) {
+			console.log("before_aiko_flg:" + before_aiko_flg);
+		}
+		*/
+		if(!isset( before_aiko_flg )) {
+			sayPepper("pon");
+		}
+		else if (before_aiko_flg == "on") {
+			sayPepper("sho");
+		} 
+		else {
+			sayPepper("pon");
+		}
 		//return;//グー・チョキ・パー表示で止める
 		
 		Tween.motion(textPon, [ "alpha", "scale" ], [ 1, 1 ], 0.012, 0, 0.002, function() {
@@ -318,9 +336,9 @@ jankengame.global.addPackage("view.janken");
 					
 					cb_func();
 					
+					var before_aiko_flg = "on";
 				} else {
 					//勝ち・負け
-					
 					text0.y = -30;
 					text0.alpha = 0;
 					text0.update();
@@ -334,6 +352,7 @@ jankengame.global.addPackage("view.janken");
 							});
 						});
 					});
+					var before_aiko_flg = "off";
 				}
 			});
 		});
@@ -460,8 +479,11 @@ jankengame.global.addPackage("view.janken");
 	this.JankenGame.prototype.startJanken = function(index) {
 		var scope = this;
 		
+		sayPepper("jan");
+		
 		scope.textEffect.startAnim(index, function() {
-			scope.jankenNavi.enabled(true);//ぽん
+			sayPepper("ken");
+			scope.jankenNavi.enabled(true);//けん
 		});
 	};
 	
@@ -475,7 +497,7 @@ jankengame.global.addPackage("view.janken");
 		var enemyIndex = Math.round(Math.random() * 2);
 		
 		//テスト用で敵はずっとグーを出す
-		//enemyIndex = 0;
+		enemyIndex = 0;
 		
 		//結果（0:あいこ、1:勝ち、2:負け）
 		//var result = 0;
@@ -500,6 +522,8 @@ jankengame.global.addPackage("view.janken");
 			switch(result) {
 				case 0:
 					//あいこ
+					sayPepper("aiko");
+
 					scope.jankenNavi.enabled(true);
 					break;
 				case 1:
@@ -526,7 +550,7 @@ jankengame.global.addPackage("view.janken");
 						
 						//scope.indicator.hideStopBtn();//____☓ボタンを隠さない
 						
-						sayPepper('geme clear!');
+						sayPepper('win');
 					} else {
 						//次の対戦へ
 						scope.startJanken(scope.currentBattleIndex);
@@ -539,6 +563,9 @@ jankengame.global.addPackage("view.janken");
 					$("div.gameOverContainer").css("display", "block");
 					$("div.bgGameOver").css("display", "block");
 					//scope.indicator.hideStopBtn();
+
+					sayPepper('lose');
+
 					break;
 				default:break;
 			}

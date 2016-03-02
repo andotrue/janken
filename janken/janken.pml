@@ -33,8 +33,8 @@
         <File name="gameclear" src="html/images/gameclear.jpg" />
         <File name="gameover" src="html/images/gameover.png" />
         <File name="gameclear" src="html/images/gameclear.png" />
-        <File name="P_par" src="html/images/P_par.png" />
         <File name="pepper" src="html/js/pepper.js" />
+        <File name="p_par" src="html/images/p_par.png" />
     </Resources>
     <Topics />
     <IgnoredPaths>

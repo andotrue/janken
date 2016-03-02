@@ -18,11 +18,11 @@ $(function (){
 
 //Pepperにデータ送信
 function sayPepper(message) {
-	alert(message);
+	//alert(message);
 	session.service("ALMemory").done(function (ALMemory) {
 		ALMemory.raiseEvent("TouchTablet/ToPepper", message);
 	});
-	alert(message);
+	//alert(message);
 }
 
 function tabletDebugMessage(message) {
@@ -31,5 +31,16 @@ function tabletDebugMessage(message) {
 	});
 }
 
+var console = {};
+console.log = function(msg){
+	//alert(msg);
+	tabletDebugMessage(msg);
+};
 
-
+var isset = function(data){
+    if(data === "" || data === null || data === undefined){
+        return false;
+    }else{
+        return true;
+    }
+};
