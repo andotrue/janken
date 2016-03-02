@@ -1,4 +1,3 @@
-
 //------------------------------------------------------------------------------------------
 // jankengame.view.janken
 
@@ -510,6 +509,7 @@ jankengame.global.addPackage("view.janken");
 					if (++scope.currentBattleIndex >= 1) {//____1勝でゲームクリア
 					//if (++scope.currentBattleIndex >= 3) {//____3勝でゲームクリア
 						console.log("ゲームクリア!");
+						//tabletDebugMessage("ゲームクリア!");
 						/*
 						//ポイント加算処理
 						console.log("ゲームクリア　-ポイント加算start- ");
@@ -520,12 +520,13 @@ jankengame.global.addPackage("view.janken");
 						console.log("ゲームクリア　-ポイント加算end- ");
 						*/
 						
-						//3連勝
 						//$("div.charaContainer").css("display", "none");
 						$("div.clearContainer").css("display", "block");
 						//scope.finalButtonContainerVisible(true);
 						
 						//scope.indicator.hideStopBtn();//____☓ボタンを隠さない
+						
+						sayPepper('geme clear!');
 					} else {
 						//次の対戦へ
 						scope.startJanken(scope.currentBattleIndex);
