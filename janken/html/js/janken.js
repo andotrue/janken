@@ -284,11 +284,10 @@ jankengame.global.addPackage("view.janken");
 		
 		//var before_aiko_flg = 0;
 		console.log("result:" + result);
-		/*
-		if(isset( before_aiko_flg )) {
+		//if(isset( before_aiko_flg )) {
+		if(before_aiko_flg != undefined) {
 			console.log("before_aiko_flg:" + before_aiko_flg);
 		}
-		*/
 		if(!isset( before_aiko_flg )) {
 			sayPepper("pon");
 		}
