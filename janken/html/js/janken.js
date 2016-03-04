@@ -11,6 +11,8 @@ jankengame.global.addPackage("view.janken");
 	var Sprite = jankengame.base.Sprite;
 	var Tween = jankengame.base.Tween;
 	
+	var before_aiko_flg = "off";
+	
 	/****************************** タイトル画面系 ********************/
 	 
 	/*******************************************************************
@@ -282,20 +284,24 @@ jankengame.global.addPackage("view.janken");
 		textPon.scale = 2;
 		textPon.update();
 		
-		//var before_aiko_flg = 0;
 		console.log("result:" + result);
-		//if(isset( before_aiko_flg )) {
 		if(before_aiko_flg != undefined) {
 			console.log("before_aiko_flg:" + before_aiko_flg);
 		}
-		if(!isset( before_aiko_flg )) {
-			sayPepper("pon");
-		}
-		else if (before_aiko_flg == "on") {
-			sayPepper("sho");
-		} 
-		else {
-			sayPepper("pon");
+		if (result == 0) {
+			if (!isset( before_aiko_flg ) || before_aiko_flg == "on") {
+				sayPepper("shoaiko");
+			}
+			else{
+				sayPepper("ponaiko");
+			}
+		} else {
+			if (!isset( before_aiko_flg ) || before_aiko_flg == "on") {
+				sayPepper("sho");
+			}
+			else{
+				sayPepper("pon");
+			}
 		}
 		//return;//グー・チョキ・パー表示で止める
 		
@@ -325,7 +331,6 @@ jankengame.global.addPackage("view.janken");
 				
 				if (result == 0) {
 					//あいこの場合は再戦の画面へ
-					
 					text0.alpha = 0;
 					text0.scale = 2;
 					text0.update();
@@ -335,7 +340,7 @@ jankengame.global.addPackage("view.janken");
 					
 					cb_func();
 					
-					var before_aiko_flg = "on";
+					before_aiko_flg = "on";
 				} else {
 					//勝ち・負け
 					text0.y = -30;
@@ -351,7 +356,7 @@ jankengame.global.addPackage("view.janken");
 							});
 						});
 					});
-					var before_aiko_flg = "off";
+					before_aiko_flg = "off";
 				}
 			});
 		});
@@ -478,10 +483,11 @@ jankengame.global.addPackage("view.janken");
 	this.JankenGame.prototype.startJanken = function(index) {
 		var scope = this;
 		
-		sayPepper("jan");
+		//sayPepper("jan");
+		sayPepper("janken");
 		
 		scope.textEffect.startAnim(index, function() {
-			sayPepper("ken");
+			//sayPepper("ken");
 			scope.jankenNavi.enabled(true);//けん
 		});
 	};
@@ -521,8 +527,6 @@ jankengame.global.addPackage("view.janken");
 			switch(result) {
 				case 0:
 					//あいこ
-					sayPepper("aiko");
-
 					scope.jankenNavi.enabled(true);
 					break;
 				case 1:
