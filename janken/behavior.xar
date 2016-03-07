@@ -15,8 +15,8 @@
         <Timeline enable="0">
             <BehaviorLayer name="behavior_layer1">
                 <BehaviorKeyframe name="keyframe1" index="1">
-                    <Diagram scale="168.179">
-                        <Box name="INIT" id="4" localization="8" tooltip="こちらに概要を記入" x="92" y="5">
+                    <Diagram scale="84.0896">
+                        <Box name="INIT" id="4" localization="8" tooltip="こちらに概要を記入" x="223" y="31">
                             <bitmap>media/images/box/box-diagram.png</bitmap>
                             <script language="4">
                                 <content>
@@ -538,7 +538,7 @@ class MyClass(GeneratedClass):
                                 </BehaviorLayer>
                             </Timeline>
                         </Box>
-                        <Box name="Log" id="7" localization="8" tooltip="Prompt the message in the debug window. You can set a prefix and a priority&#x0A;for the message in the parameters." x="126" y="153">
+                        <Box name="Log" id="7" localization="8" tooltip="Prompt the message in the debug window. You can set a prefix and a priority&#x0A;for the message in the parameters." x="218" y="219">
                             <bitmap>media/images/box/print.png</bitmap>
                             <script language="4">
                                 <content>
@@ -588,7 +588,7 @@ class MyClass(GeneratedClass):
                             <Parameter name="Parameter" inherits_from_parent="0" content_type="1" value="1" default_value="30" min="0" max="100" tooltip="" id="6" />
                             <Parameter name="Parameter1" inherits_from_parent="0" content_type="1" value="50" default_value="50" min="0" max="100" tooltip="" id="7" />
                         </Box>
-                        <Box name="sayPepper" id="2" localization="8" tooltip="こちらに概要を記入" x="307" y="22">
+                        <Box name="sayPepper" id="2" localization="8" tooltip="こちらに概要を記入" x="484" y="36">
                             <bitmap>media/images/box/box-diagram.png</bitmap>
                             <script language="4">
                                 <content>

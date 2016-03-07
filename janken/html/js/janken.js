@@ -196,9 +196,15 @@ jankengame.global.addPackage("view.janken");
 		this.element.visible(true);
 		
 		this.element.y = window.innerHeight;
+
+		//this.element.alpha = 200;
+		//this.element.scale = 20;
+
 		this.element.update();
 		
-		Tween.motion(this.element, [ "y" ], [ 0 ], 0.035, 0, 0.1, function() {
+		Tween.motion(this.element, [ "y" ], [ 100 ], 0.0035, 0, 0.1, function() {
+		//Tween.motion(this.element, [ "alpha", "scale" ], [ 5, 5 ], 0.0003, 0.0050, 0.1, function() {
+		//Tween.motion(this.element, [ "alpha", "scale" ], [ 5, 5 ], 0.0035, 0, 0.01, function() {
 			cb_func();
 		});
 	};
@@ -332,11 +338,11 @@ jankengame.global.addPackage("view.janken");
 				if (result == 0) {
 					//あいこの場合は再戦の画面へ
 					text0.alpha = 0;
-					text0.scale = 2;
+					text0.scale = 20;
 					text0.update();
 					
 					$(scope.elmName).css("padding-top", 205);
-					Tween.motion(text0, [ "alpha", "scale" ], [ 1, 1 ], 0.012, 0, 0.002);
+					Tween.motion(text0, [ "alpha", "scale" ], [ 1, 1 ], 0.003, 0, 0.02);
 					
 					cb_func();
 					
