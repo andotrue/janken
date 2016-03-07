@@ -165,13 +165,14 @@ div.selectIconContainer {
 
 div.selectIcon {
 	position:relative;
-	top: -175px;
+	//top: -175px;
+	top: -1100px;
 	left: -55px;
 	//left: 255px;
 	width:270px;
 	height:273px;
 	margin:auto;
-	background-position:-640px -2px;
+	//background-position:-640px -2px;
 }
 
 div.selectIcon p {
