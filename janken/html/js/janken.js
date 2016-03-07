@@ -254,14 +254,14 @@ jankengame.global.addPackage("view.janken");
 		
 		textJan.visible(true);
 		textKen.visible(true);
-		textJan.scale = 2;
+		textJan.scale = 20;
 		textJan.update();
-		textKen.scale = 2;
+		textKen.scale = 20;
 		textKen.update();
 		
 		//spt, prop_array, end_array, sp, cb_func, delay, threshold
-		Tween.motion(textJan, [ "alpha", "scale" ], [ 1, 1 ], 0.012, 0, 0.002);
-		Tween.motion(textKen, [ "alpha", "scale" ], [ 1, 1 ], 0.012, 30, 0.002, function() {
+		Tween.motion(textJan, [ "alpha", "scale" ], [ 1, 1 ], 0.003, 0, 0.02);
+		Tween.motion(textKen, [ "alpha", "scale" ], [ 1, 1 ], 0.003, 5, 0.02, function() {
 			cb_func();
 		});
 	};
