@@ -38,7 +38,7 @@
     </Resources>
     <Topics />
     <IgnoredPaths>
-        <Path src="html/.DS_Store" />
-        <Path src="html/images/.DS_Store" />
+        <Path src="html/images/P_par.png" />
+        <Path src="html/images/p_par.png" />
     </IgnoredPaths>
 </Package>
