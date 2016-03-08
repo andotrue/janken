@@ -34,11 +34,10 @@
         <File name="gameover" src="html/images/gameover.png" />
         <File name="gameclear" src="html/images/gameclear.png" />
         <File name="pepper" src="html/js/pepper.js" />
-        <File name="p_par" src="html/images/p_par.png" />
     </Resources>
     <Topics />
     <IgnoredPaths>
-        <Path src="html/images/P_par.png" />
-        <Path src="html/images/p_par.png" />
+        <Path src="html/.DS_Store" />
+        <Path src="html/images/.DS_Store" />
     </IgnoredPaths>
 </Package>

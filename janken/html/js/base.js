@@ -656,7 +656,8 @@
 			
 			tg.css("background-size", (img_w * sc) + "px " + (img_h * sc) + "px");
 		}
-		
+		console.log((img_w * sc) + "px " + (img_h * sc) + "px");
+
 		return { x : img_w * sc, y : img_h * sc };
 	};
 	

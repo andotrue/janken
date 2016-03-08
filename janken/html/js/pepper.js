@@ -10,18 +10,16 @@ function isset( data ){
     }
 };
 
+//ボタンクリックイベント
 $(function (){
     var _event = 'touchend click';
 
     $(document).on(_event, '.bnt_click', function(event) {
         var id = event.target.id;
         //alert("bnt_click:" + id);
-        tabletDebugMessage("bnt_click:" + id)
+        tabletDebugMessage("bnt_click:" + id);
         
-    	session.service("ALMemory").done(function (ALMemory) {
-    		ALMemory.raiseEvent("TouchTablet/ToPepper", id);
-    	});
-
+        sayPepper(id);
     });
 });
 
@@ -35,12 +33,14 @@ function sayPepper(message) {
 	//alert(message);
 }
 
+//ペッパー側にログを出力
 function tabletDebugMessage(message) {
 	session.service("ALMemory").done(function (ALMemory) {
 	    ALMemory.raiseEvent("TabletDebug/message", "tabletDebugMessage : " + message);
 	});
 }
 
+//コンソールログをtabletDebugMessageに置き換え
 var console = {};
 console.log = function(msg){
 	//alert(msg);
