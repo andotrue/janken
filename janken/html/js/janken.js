@@ -505,7 +505,7 @@ jankengame.global.addPackage("view.janken");
 		var enemyIndex = Math.round(Math.random() * 2);
 		
 		//テスト用で敵はずっとグーを出す
-		enemyIndex = 0;
+		//enemyIndex = 0;
 		
 		//結果（0:あいこ、1:勝ち、2:負け）
 		//var result = 0;

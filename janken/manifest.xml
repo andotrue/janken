@@ -1,9 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="janken" version="0.0.0">
+<package uuid="janken" version="0.0.1">
  <names>
   <name lang="en_US">janken</name>
+  <name lang="en_US-x-scrald">janken</name>
   <name lang="ja_JP">じゃんけん</name>
+  <name lang="ja_JP-x-scrald">じゃんけん</name>
  </names>
+ <descriptions>
+  <description lang="ja_JP">じゃんけん
+1:user win
+2:user lose
+3:timeout</description>
+  <description lang="ja_JP-x-scrald">じゃんけん
+1:user win
+2:user lose
+3:timeout</description>
+ </descriptions>
  <supportedLanguages>
   <language>ja_JP</language>
  </supportedLanguages>
@@ -14,10 +26,11 @@
   <behaviorContent path=".">
    <userRequestable/>
    <nature>interactive</nature>
-   <triggerSentences/>
-   <loadingResponses/>
-   <autonomous/>
    <permissions/>
   </behaviorContent>
  </contents>
+ <requirements>
+  <naoqiRequirement maxVersion="2.4" minVersion="2.4"/>
+  <robotRequirement model="JULIETTE_Y20"/>
+ </requirements>
 </package>
