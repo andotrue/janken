@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="janken-c06c92" version="0.0.0">
+<package uuid="janken" version="0.0.0">
  <names>
   <name lang="en_US">janken</name>
+  <name lang="ja_JP">じゃんけん</name>
  </names>
  <supportedLanguages>
   <language>ja_JP</language>
@@ -13,6 +14,9 @@
   <behaviorContent path=".">
    <userRequestable/>
    <nature>interactive</nature>
+   <triggerSentences/>
+   <loadingResponses/>
+   <autonomous/>
    <permissions/>
   </behaviorContent>
  </contents>
