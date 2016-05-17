@@ -4,3 +4,4 @@
 	echo "test2";
 	
 	echo "branchtest2-1";
+	echo "branchtest2-2";
